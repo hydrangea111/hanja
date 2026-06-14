@@ -1,3 +1,4 @@
+//ver.3
 import React, { useState, useRef, useEffect } from 'react';
 import { Upload, FileText, Download, Copy, Trash2, ArrowLeftRight } from 'lucide-react';
 import * as mammoth from 'mammoth';
@@ -35,7 +36,7 @@ const HANJA_DICT = {
   '답': '答踏', '당': '堂當黨糖', '대': '大代代對待帶臺貸隊大', '댁': '宅', '덕': '德', '도': '道度導都圖島到度挑塗逃盜渡刀悼',
   '독': '讀獨毒督', '돈': '敦頓豚', '돌': '突', '동': '同動東童冬洞銅凍瞳', '두': '頭豆斗杜', '둔': '鈍屯',
   '득': '得', '등': '等登燈等', '라': '羅羅', '락': '落樂', '란': '難欄', '람': '覽藍',
-  '랑': '郞浪', '래': '來', '랭': '冷', '략': '略', '량': '양량兩量良凉糧', '려': '旅麗慮',
+  '랑': '郞浪', '래': '來', '랭': '冷', '략': '略', '량': '양량裝量良凉糧', '려': '旅麗慮',
   '력': '力歷曆', '련': '連練聯蓮', '렬': '列烈劣', '렴': '廉', '령': '領令嶺零', '례': '例禮',
   '로': '路老勞露爐', '록': '綠錄鹿', '론': '論', '롱': '弄', '뢰': '雷賴', '료': '料療',
   '룡': '龍', '루': '樓淚漏', '류': '流類留柳', '륙': '陸六', '륜': '倫輪', '률': '律率',
@@ -252,7 +253,7 @@ const HanjaConverter = () => {
         {/* 토글 스위치 */}
         <div className="flex justify-center mb-8">
           <button
-            onClick={() => setConversionMode(prev => prev === 'hanja-to-hangul' ? 'hangul-to-hanja' : 'hanja-to-hangul')}
+            onClick={() => setConversionMode(prev => prev === 'hanja-to-hangul' ? 'hangul-to-ja' : 'hanja-to-hangul')}
             className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium px-5 py-2.5 rounded-full shadow-md transition-all active:scale-95"
           >
             <ArrowLeftRight size={18} />
@@ -304,7 +305,7 @@ const HanjaConverter = () => {
             />
           </div>
 
-          {/* 출력 편집창 (인터랙티브 에디터) */}
+          {/* 출력 편집창 */}
           <div className="flex flex-col">
             <div className="text-sm font-bold text-slate-700 mb-2 flex justify-between items-center">
               <span>실시간 변환 및 독음 선택 결과</span>
